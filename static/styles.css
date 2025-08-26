@@ -1,0 +1,408 @@
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFCCCB 30%, #E6E6FA 60%, #F0FFF0 100%);
+            min-height: 100vh;
+        }
+        
+        .card-bg {
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid rgba(231, 126, 34, 0.6);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(231, 126, 34, 0.2);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(231, 126, 34, 0.3);
+        }
+        
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            border: 3px solid #E67E22;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            margin: 0 auto 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(231, 126, 34, 0.4);
+        }
+        .logo-placeholder:hover {
+            box-shadow: 0 0 30px rgba(231, 126, 34, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3);
+            border-color: #E74C3C;
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .subtle-pattern {
+            background-image: 
+                radial-gradient(circle at 3px 3px, rgba(231, 126, 34, 0.1) 2px, transparent 0),
+                radial-gradient(circle at 15px 15px, rgba(52, 152, 219, 0.08) 1px, transparent 0),
+                radial-gradient(circle at 25px 8px, rgba(155, 89, 182, 0.06) 1px, transparent 0);
+            background-size: 30px 30px, 50px 50px, 40px 40px;
+        }
+        
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Background elements - desktop only */
+        .ferris-wheel {
+            position: absolute;
+            right: 5%;
+            bottom: 15%;
+            z-index: 1;
+            opacity: 0.4;
+        }
+        .ferris-wheel-left {
+            position: absolute;
+            left: 3%;
+            bottom: 18%;
+            z-index: 1;
+            opacity: 0.35;
+        }
+        .ferris-wheel-rotating {
+            animation: rotate 25s linear infinite;
+            transform-origin: 150px 150px;
+        }
+        .ferris-wheel-left-rotating {
+            animation: rotate-reverse 30s linear infinite;
+            transform-origin: 140px 140px;
+        }
+        
+        .cloud {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.7;
+        }
+        .cloud-1 {
+            left: 8%;
+            top: 6%;
+            animation: float-cloud-1 20s ease-in-out infinite;
+        }
+        .cloud-2 {
+            left: 45%;
+            top: 8%;
+            animation: float-cloud-2 25s ease-in-out infinite;
+        }
+        .cloud-3 {
+            left: 75%;
+            top: 12%;
+            animation: float-cloud-3 18s ease-in-out infinite;
+        }
+        
+        .ground {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+        
+        .meadow-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        /* Animated Sun - Always visible */
+        .animated-sun {
+            position: absolute;
+            top: 5%;
+            right: 12%;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        
+        /* Animations */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes rotate-reverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+        @keyframes float-cloud-1 {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            50% { transform: translateX(30px) translateY(-10px); }
+        }
+        @keyframes float-cloud-2 {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            50% { transform: translateX(-25px) translateY(8px); }
+        }
+        @keyframes float-cloud-3 {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            50% { transform: translateX(20px) translateY(-5px); }
+        }
+        @keyframes grass-sway {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(3deg); }
+        }
+        
+        .grass-blade { 
+            animation: grass-sway 3s ease-in-out infinite; 
+            transform-origin: bottom center; 
+        }
+        .grass-blade:nth-child(2n) { animation-delay: -0.5s; }
+        .grass-blade:nth-child(3n) { animation-delay: -1s; animation-duration: 4s; }
+        .grass-blade:nth-child(4n) { animation-delay: -1.5s; animation-duration: 2.5s; }
+        .grass-blade:nth-child(5n) { animation-delay: -2s; }
+        
+        /* Sun ray animations */
+        @keyframes ray1 { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.3) rotate(5deg); } }
+        @keyframes ray2 { 0%, 100% { transform: scale(1.1) rotate(0deg); } 30% { transform: scale(0.9) rotate(-3deg); } }
+        @keyframes ray3 { 0%, 100% { transform: scale(0.95) rotate(0deg); } 70% { transform: scale(1.25) rotate(4deg); } }
+        @keyframes ray4 { 0%, 100% { transform: scale(1.05) rotate(0deg); } 60% { transform: scale(0.8) rotate(-2deg); } }
+        @keyframes ray5 { 0%, 100% { transform: scale(1.2) rotate(0deg); } 40% { transform: scale(1.0) rotate(3deg); } }
+        @keyframes ray6 { 0%, 100% { transform: scale(0.9) rotate(0deg); } 80% { transform: scale(1.15) rotate(-4deg); } }
+        @keyframes ray7 { 0%, 100% { transform: scale(1.0) rotate(0deg); } 20% { transform: scale(1.4) rotate(2deg); } }
+        @keyframes ray8 { 0%, 100% { transform: scale(1.3) rotate(0deg); } 90% { transform: scale(0.95) rotate(-3deg); } }
+        
+        .sun-ray-1 { animation: ray1 3.2s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-2 { animation: ray2 2.8s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-3 { animation: ray3 3.5s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-4 { animation: ray4 2.3s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-5 { animation: ray5 4.1s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-6 { animation: ray6 2.9s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-7 { animation: ray7 3.7s ease-in-out infinite; transform-origin: center; }
+        .sun-ray-8 { animation: ray8 2.6s ease-in-out infinite; transform-origin: center; }
+        
+        /* Button animations */
+        .btn-carnival {
+            background: linear-gradient(135deg, #E74C3C, #F39C12, #9B59B6);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid #E67E22;
+        }
+        .btn-carnival:hover {
+            background: linear-gradient(135deg, #C0392B, #E67E22, #8E44AD);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.6);
+            transform: translateY(-3px) scale(1.05);
+        }
+        .btn-carnival:active {
+            transform: translateY(0px) scale(0.98);
+        }
+        
+        /* Game card animations */
+        .game-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: 2px solid;
+        }
+        .game-card:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .game-card:hover .game-emoji {
+            transform: scale(1.3) rotate(10deg);
+        }
+        
+        .game-emoji {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.8rem;
+        }
+        
+        /* Colorful game cards */
+        .game-card:nth-child(1) { background: linear-gradient(135deg, #FFE5E5, #FFCCCC); border-color: #E74C3C; }
+        .game-card:nth-child(2) { background: linear-gradient(135deg, #FFF3E0, #FFE0B3); border-color: #F39C12; }
+        .game-card:nth-child(3) { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border-color: #9B59B6; }
+        .game-card:nth-child(4) { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-color: #3498DB; }
+        .game-card:nth-child(5) { background: linear-gradient(135deg, #E8F5E8, #C8E6C9); border-color: #27AE60; }
+        .game-card:nth-child(6) { background: linear-gradient(135deg, #FCE4EC, #F8BBD9); border-color: #E91E63; }
+        .game-card:nth-child(7) { background: linear-gradient(135deg, #FFF8E1, #FFECB3); border-color: #F1C40F; }
+        .game-card:nth-child(8) { background: linear-gradient(135deg, #FFEBEE, #FFCDD2); border-color: #FF6B35; }
+        
+        /* Info cards with vibrant colors */
+        .info-date { background: linear-gradient(135deg, #E74C3C, #FF6B6B) !important; color: white !important; border-color: #C0392B !important; }
+        .info-time { background: linear-gradient(135deg, #F39C12, #FFD93D) !important; color: white !important; border-color: #E67E22 !important; }
+        .info-venue { background: linear-gradient(135deg, #9B59B6, #BE90D4) !important; color: white !important; border-color: #8E44AD !important; }
+        .info-entry { background: linear-gradient(135deg, #27AE60, #58D68D) !important; color: white !important; border-color: #229954 !important; }
+        
+        /* Notification styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid;
+        }
+        .notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        /* RESPONSIVE STYLES */
+        
+        /* Mobile First: Hide all decorative elements by default */
+        .ferris-wheel,
+        .ferris-wheel-left,
+        .cloud,
+        .ground,
+        .meadow-lines {
+            display: none;
+        }
+        
+        /* Mobile sun positioning */
+        .animated-sun {
+            top: 3%;
+            right: 5%;
+            opacity: 0.9;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(180deg, #FFE5B4 0%, #FFCCCB 40%, #E6E6FA 100%);
+            }
+            
+            .subtle-pattern {
+                background-image: 
+                    radial-gradient(circle at 3px 3px, rgba(231, 126, 34, 0.08) 2px, transparent 0);
+                background-size: 25px 25px;
+            }
+            
+            .animated-sun {
+                top: 2%;
+                right: 3%;
+                transform: scale(0.7);
+            }
+            
+            .logo-placeholder {
+                width: 70px;
+                height: 70px;
+                margin: 0 auto 0.75rem;
+            }
+            
+            .card-bg {
+                margin-top: 80px;
+                border-width: 2px;
+                padding: 1.5rem;
+            }
+            
+            /* Mobile game grid - 2 columns on very small screens */
+            .game-grid-mobile {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .game-emoji {
+                font-size: 1.5rem;
+            }
+            
+            /* Mobile info cards - stack on very small screens */
+            .info-grid-mobile {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            /* Button adjustments */
+            .btn-carnival {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            /* Notification positioning */
+            .notification {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                transform: translateY(-100%);
+                width: auto;
+            }
+            .notification.show {
+                transform: translateY(0);
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .animated-sun {
+                transform: scale(0.6);
+                top: 1%;
+                right: 2%;
+            }
+            
+            .card-bg {
+                margin-top: 70px;
+                padding: 1rem;
+            }
+            
+            .logo-placeholder {
+                width: 60px;
+                height: 60px;
+            }
+            
+            /* Single column for info cards on very small screens */
+            .info-grid-mobile {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            
+            /* Smaller game cards */
+            .game-card {
+                padding: 0.5rem;
+            }
+            
+            .game-emoji {
+                font-size: 1.25rem;
+            }
+        }
+        
+        /* Tablet and up: Show decorative elements */
+        @media (min-width: 769px) {
+            .ferris-wheel,
+            .ferris-wheel-left,
+            .cloud,
+            .ground,
+            .meadow-lines {
+                display: block;
+            }
+            
+            .animated-sun {
+                top: 5%;
+                right: 12%;
+                transform: scale(1);
+            }
+            
+            .card-bg {
+                margin-top: 0;
+            }
+        }
+        
+        /* Desktop optimizations */
+        @media (min-width: 1024px) {
+            .ferris-wheel {
+                right: 5%;
+                bottom: 15%;
+                opacity: 0.4;
+            }
+            
+            .ferris-wheel-left {
+                left: 3%;
+                bottom: 18%;
+                opacity: 0.35;
+            }
+            
+            .ground {
+                height: 35%;
+                opacity: 0.3;
+            }
+        }
