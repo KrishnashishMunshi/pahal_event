@@ -22,46 +22,6 @@
                 }
             }
         } 
-  
-  // Utility function to show notifications
-        function showNotification(message, type = 'success') {
-            const notification = document.createElement('div');
-            notification.className = `notification px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium shadow-lg font-quicksand ${
-                type === 'success' ? 'bg-sage text-white border-green-400' : 'bg-coral text-white border-red-400'
-            }`;
-            notification.innerHTML = message;
-            
-            document.body.appendChild(notification);
-            
-            // Trigger show animation
-            setTimeout(() => notification.classList.add('show'), 100);
-            
-            // Auto hide after 3 seconds
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => notification.remove(), 400);
-            }, 3000);
-        }
-
-        // Logo click handler
-        function logoClick() {
-            showNotification('🎪 Welcome to Childhood Carnival! A magical experience awaits!');
-        }
-
-        // Game card click handler
-        function gameClick(gameName) {
-            const messages = {
-                'Water Pong': '🎯 Water Pong - Test your aim and win amazing prizes!',
-                'Spoon Rush': '🥄 Spoon Rush - Balance and speed in this exciting race!',
-                'Ring Toss': '💍 Ring Toss - Test your accuracy and win rewards!',
-                'Blindfolded Art': '🎨 Blindfolded Art - Create masterpieces without seeing!',
-                'DIY Gifts': '🎁 DIY Gifts - Make beautiful handmade treasures!',
-                'Pyramid Siege': '🥤 Pyramid Siege - Knock down the pyramid and win!',
-                'Life-size Snake and Ladders': '🐍 Life-size Snakes and Ladders - Play the classic game in real life!',
-                'Beyblades': '🌀 Beyblades - Let it rip and battle to victory!'
-            };
-            showNotification(messages[gameName] || `🎮 ${gameName} - Coming soon!`);
-        }
 
         // Social media click handler
         function socialClick(platform) {
@@ -72,22 +32,7 @@
             showNotification(messages[platform]);
         }
 
-        // Main registration button handler
-        document.addEventListener('DOMContentLoaded', function() {
-            const registerBtn = document.getElementById('registerBtn');
-            
-            registerBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Button press animation
-                this.style.transform = 'translateY(0px) scale(0.96)';
-                
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-3px) scale(1.05)';
-                    showNotification('✅ Registration interest recorded! Event details will be shared with you soon. Get ready for an amazing carnival experience!');
-                }, 150);
-            });
-        });
+      
 
         // Add interactive effects
         document.addEventListener('DOMContentLoaded', function() {
@@ -102,13 +47,6 @@
                     this.style.transform = 'translateY(0px) scale(1)';
                 });
             });
-        });
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' && e.target.classList.contains('game-card')) {
-                e.target.click();
-            }
         });
 
         // Make elements accessible
@@ -142,3 +80,30 @@
 
         window.addEventListener('resize', handleResize);
         handleResize(); // Call once on load
+
+        // Get the registration button element
+        const registerBtn = document.getElementById('registerBtn');
+
+    
+            const originalBtnText = registerBtn.innerHTML;
+            
+            registerBtn.addEventListener('click', function() {
+                console.log("clicked");
+                // Provide visual feedback to the user
+                this.innerHTML = 'Redirecting...';
+                this.disabled = true;
+                
+                // --- IMPORTANT ---
+                // Replace this placeholder URL with your actual registration link (e.g., a Google Form).
+                const registrationUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdp8flybfByxzf-LNLjzFYiflZCOfnP5k8H_NVqWy3c-Md_Lg/viewform?usp=header';
+
+                // Open the registration link in a new tab
+                window.open(registrationUrl, '_blank');
+                
+                // Reset the button text after a short delay
+                // This is helpful if the user stays on the page or the popup is blocked
+                setTimeout(() => {
+                    this.innerHTML = originalBtnText;
+                    this.disabled = false;
+                }, 2500);
+            });

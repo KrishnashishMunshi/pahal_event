@@ -38,23 +38,17 @@
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 subtle-pattern">
-    
     <!-- Meadow Background Lines - Desktop Only -->
     <div class="meadow-lines">
         <svg width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Rolling hill lines in vibrant green -->
             <g stroke="#27AE60" stroke-width="3" fill="none" opacity="1">
-                <!-- Back hills -->
                 <path d="M0,200 Q200,180 400,190 T800,185 T1200,190" stroke-dasharray="4,2"/>
                 <path d="M0,250 Q150,230 300,240 T600,235 T900,245 T1200,240" stroke-dasharray="5,2"/>
                 <path d="M0,180 Q100,160 250,170 T500,165 T750,175 T1000,170 T1200,175" stroke-dasharray="3,3"/>
-                
-                <!-- Middle ground -->
                 <path d="M0,320 Q250,300 500,310 T1000,305 T1200,315" stroke-dasharray="6,2"/>
                 <path d="M0,380 Q180,360 360,370 T720,365 T1200,375" stroke-dasharray="4,3"/>
                 <path d="M0,420 Q300,400 600,410 T1200,405" stroke-dasharray="5,2"/>
-                
-                <!-- Foreground meadow -->
                 <path d="M0,500 Q400,480 800,490 T1200,485" stroke-dasharray="7,1"/>
                 <path d="M0,560 Q200,540 400,550 T800,545 T1200,555" stroke-dasharray="4,2"/>
                 <path d="M0,620 Q150,600 300,610 T600,605 T900,615 T1200,610" stroke-dasharray="6,3"/>
@@ -62,262 +56,93 @@
         </svg>
     </div>
 
-    <!-- Ground with Animated Grass - Desktop Only -->
-    <div class="ground">
-        <svg width="100%" height="100%" viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Ground base -->
-            <rect x="0" y="200" width="1200" height="100" fill="#58D68D" opacity="1"/>
-            
-            <!-- Grass blades with vibrant strokes -->
-            <g stroke="#27AE60" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8">
-                <path class="grass-blade" d="M50,200 Q52,190 54,180 Q52,185 50,190" stroke-width="5"/>
-                <path class="grass-blade" d="M80,200 Q85,185 90,170 Q85,180 80,190" stroke-width="4"/>
-                <path class="grass-blade" d="M120,200 Q125,188 130,175 Q125,185 120,195" stroke-width="5"/>
-                <path class="grass-blade" d="M160,200 Q162,192 165,185 Q162,190 160,195" stroke-width="4"/>
-                <path class="grass-blade" d="M200,200 Q205,185 210,170 Q205,180 200,190" stroke-width="5"/>
-                <path class="grass-blade" d="M240,200 Q245,190 250,180 Q245,185 240,192" stroke-width="4"/>
-                <path class="grass-blade" d="M280,200 Q285,182 290,165 Q285,175 280,188" stroke-width="5"/>
-                <path class="grass-blade" d="M320,200 Q322,195 325,190 Q322,192 320,195" stroke-width="4"/>
-                <path class="grass-blade" d="M360,200 Q365,185 370,170 Q365,180 360,190" stroke-width="5"/>
-                <path class="grass-blade" d="M400,200 Q405,188 410,175 Q405,185 400,195" stroke-width="4"/>
-            </g>
-        </svg>
-    </div>
-
     <!-- Floating Clouds - Desktop Only -->
     <div class="cloud cloud-1">
-        <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#FFFFFF" opacity="0.9" stroke="#3498DB" stroke-width="2">
-                <circle cx="25" cy="45" r="20"/>
-                <circle cx="50" cy="35" r="25"/>
-                <circle cx="80" cy="40" r="22"/>
-                <circle cx="100" cy="45" r="18"/>
-            </g>
-        </svg>
+        <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg"><g fill="#FFFFFF" opacity="0.9" stroke="#3498DB" stroke-width="2"><circle cx="25" cy="45" r="20"/><circle cx="50" cy="35" r="25"/><circle cx="80" cy="40" r="22"/><circle cx="100" cy="45" r="18"/></g></svg>
     </div>
-    
     <div class="cloud cloud-2">
-        <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#FFFFFF" opacity="0.9" stroke="#9B59B6" stroke-width="2">
-                <circle cx="30" cy="50" r="22"/>
-                <circle cx="60" cy="40" r="28"/>
-                <circle cx="95" cy="45" r="25"/>
-                <circle cx="115" cy="50" r="20"/>
-            </g>
-        </svg>
+        <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg"><g fill="#FFFFFF" opacity="0.9" stroke="#9B59B6" stroke-width="2"><circle cx="30" cy="50" r="22"/><circle cx="60" cy="40" r="28"/><circle cx="95" cy="45" r="25"/><circle cx="115" cy="50" r="20"/></g></svg>
     </div>
     
-    <div class="cloud cloud-3">
-        <svg width="110" height="70" viewBox="0 0 110 70" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#FFFFFF" opacity="0.9" stroke="#E91E63" stroke-width="2">
-                <circle cx="22" cy="40" r="18"/>
-                <circle cx="45" cy="32" r="22"/>
-                <circle cx="70" cy="38" r="20"/>
-                <circle cx="88" cy="42" r="16"/>
-            </g>
-        </svg>
-    </div>
-
     <!-- Ferris Wheel Background - Right - Desktop Only -->
     <div class="ferris-wheel">
-        <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
-            <!-- Support stand -->
-            <g stroke="#E67E22" stroke-width="8" fill="none" opacity="0.9">
-                <line x1="120" y1="270" x2="150" y2="150"/>
-                <line x1="180" y1="270" x2="150" y2="150"/>
-                <line x1="105" y1="300" x2="195" y2="300"/>
-                <line x1="120" y1="270" x2="105" y2="300"/>
-                <line x1="180" y1="270" x2="195" y2="300"/>
-            </g>
-            
-            <!-- Rotating wheel group -->
-            <g class="ferris-wheel-rotating">
-                <!-- Main wheel circle -->
-                <circle cx="150" cy="150" r="120" fill="none" stroke="#E74C3C" stroke-width="6"/>
-                
-                <!-- Spokes -->
-                <line x1="150" y1="30" x2="150" y2="270" stroke="#F39C12" stroke-width="4"/>
-                <line x1="30" y1="150" x2="270" y2="150" stroke="#F39C12" stroke-width="4"/>
-                <line x1="63.4" y1="63.4" x2="236.6" y2="236.6" stroke="#F39C12" stroke-width="4"/>
-                <line x1="236.6" y1="63.4" x2="63.4" y2="236.6" stroke="#F39C12" stroke-width="4"/>
-                
-                <!-- Gondolas -->
-                <g fill="#9B59B6" stroke="#E74C3C" stroke-width="3">
-                    <rect x="143" y="22" width="14" height="16" rx="3"/>
-                    <rect x="258" y="143" width="14" height="16" rx="3"/>
-                    <rect x="143" y="262" width="14" height="16" rx="3"/>
-                    <rect x="28" y="143" width="14" height="16" rx="3"/>
-                    <rect x="224" y="55" width="14" height="16" rx="3"/>
-                    <rect x="224" y="229" width="14" height="16" rx="3"/>
-                    <rect x="55" y="55" width="14" height="16" rx="3"/>
-                    <rect x="55" y="229" width="14" height="16" rx="3"/>
-                </g>
-                
-                <!-- Center hub -->
-                <circle cx="150" cy="150" r="18" fill="#E74C3C"/>
-                <circle cx="150" cy="150" r="10" fill="#F39C12"/>
-            </g>
-        </svg>
+        <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg"><g stroke="#E67E22" stroke-width="8" fill="none" opacity="0.9"><line x1="120" y1="270" x2="150" y2="150"/><line x1="180" y1="270" x2="150" y2="150"/><line x1="105" y1="300" x2="195" y2="300"/><line x1="120" y1="270" x2="105" y2="300"/><line x1="180" y1="270" x2="195" y2="300"/></g><g class="ferris-wheel-rotating"><circle cx="150" cy="150" r="120" fill="none" stroke="#E74C3C" stroke-width="6"/><line x1="150" y1="30" x2="150" y2="270" stroke="#F39C12" stroke-width="4"/><line x1="30" y1="150" x2="270" y2="150" stroke="#F39C12" stroke-width="4"/><line x1="63.4" y1="63.4" x2="236.6" y2="236.6" stroke="#F39C12" stroke-width="4"/><line x1="236.6" y1="63.4" x2="63.4" y2="236.6" stroke="#F39C12" stroke-width="4"/><g fill="#9B59B6" stroke="#E74C3C" stroke-width="3"><rect x="143" y="22" width="14" height="16" rx="3"/><rect x="258" y="143" width="14" height="16" rx="3"/><rect x="143" y="262" width="14" height="16" rx="3"/><rect x="28" y="143" width="14" height="16" rx="3"/><rect x="224" y="55" width="14" height="16" rx="3"/><rect x="224" y="229" width="14" height="16" rx="3"/><rect x="55" y="55" width="14" height="16" rx="3"/><rect x="55" y="229" width="14" height="16" rx="3"/></g><circle cx="150" cy="150" r="18" fill="#E74C3C"/><circle cx="150" cy="150" r="10" fill="#F39C12"/></g></svg>
     </div>
 
     <!-- Ferris Wheel Background - Left - Desktop Only -->
     <div class="ferris-wheel-left">
-        <svg width="280" height="380" viewBox="0 0 280 380" xmlns="http://www.w3.org/2000/svg">
-            <!-- Support stand -->
-            <g stroke="#27AE60" stroke-width="6" fill="none" opacity="0.9">
-                <line x1="110" y1="250" x2="140" y2="140"/>
-                <line x1="170" y1="250" x2="140" y2="140"/>
-                <line x1="95" y1="280" x2="185" y2="280"/>
-                <line x1="110" y1="250" x2="95" y2="280"/>
-                <line x1="170" y1="250" x2="185" y2="280"/>
-            </g>
-            
-            <!-- Rotating wheel group -->
-            <g class="ferris-wheel-left-rotating">
-                <!-- Main wheel circle -->
-                <circle cx="140" cy="140" r="110" fill="none" stroke="#3498DB" stroke-width="5"/>
-                
-                <!-- Spokes -->
-                <line x1="140" y1="30" x2="140" y2="250" stroke="#27AE60" stroke-width="4"/>
-                <line x1="30" y1="140" x2="250" y2="140" stroke="#27AE60" stroke-width="4"/>
-                <line x1="62" y1="62" x2="218" y2="218" stroke="#27AE60" stroke-width="4"/>
-                <line x1="218" y1="62" x2="62" y2="218" stroke="#27AE60" stroke-width="4"/>
-                
-                <!-- Gondolas -->
-                <g fill="#E91E63" stroke="#3498DB" stroke-width="3">
-                    <rect x="133" y="22" width="14" height="16" rx="3"/>
-                    <rect x="238" y="133" width="14" height="16" rx="3"/>
-                    <rect x="133" y="242" width="14" height="16" rx="3"/>
-                    <rect x="28" y="133" width="14" height="16" rx="3"/>
-                    <rect x="208" y="55" width="14" height="16" rx="3"/>
-                    <rect x="208" y="209" width="14" height="16" rx="3"/>
-                    <rect x="55" y="55" width="14" height="16" rx="3"/>
-                    <rect x="55" y="209" width="14" height="16" rx="3"/>
-                </g>
-                
-                <!-- Center hub -->
-                <circle cx="140" cy="140" r="16" fill="#3498DB"/>
-                <circle cx="140" cy="140" r="9" fill="#27AE60"/>
-            </g>
-        </svg>
+        <svg width="280" height="380" viewBox="0 0 280 380" xmlns="http://www.w3.org/2000/svg"><g stroke="#27AE60" stroke-width="6" fill="none" opacity="0.9"><line x1="110" y1="250" x2="140" y2="140"/><line x1="170" y1="250" x2="140" y2="140"/><line x1="95" y1="280" x2="185" y2="280"/><line x1="110" y1="250" x2="95" y2="280"/><line x1="170" y1="250" x2="185" y2="280"/></g><g class="ferris-wheel-left-rotating"><circle cx="140" cy="140" r="110" fill="none" stroke="#3498DB" stroke-width="5"/><line x1="140" y1="30" x2="140" y2="250" stroke="#27AE60" stroke-width="4"/><line x1="30" y1="140" x2="250" y2="140" stroke="#27AE60" stroke-width="4"/><line x1="62" y1="62" x2="218" y2="218" stroke="#27AE60" stroke-width="4"/><line x1="218" y1="62" x2="62" y2="218" stroke="#27AE60" stroke-width="4"/><g fill="#E91E63" stroke="#3498DB" stroke-width="3"><rect x="133" y="22" width="14" height="16" rx="3"/><rect x="238" y="133" width="14" height="16" rx="3"/><rect x="133" y="242" width="14" height="16" rx="3"/><rect x="28" y="133" width="14" height="16" rx="3"/><rect x="208" y="55" width="14" height="16" rx="3"/><rect x="208" y="209" width="14" height="16" rx="3"/><rect x="55" y="55" width="14" height="16" rx="3"/><rect x="55" y="209" width="14" height="16" rx="3"/></g><circle cx="140" cy="140" r="16" fill="#3498DB"/><circle cx="140" cy="140" r="9" fill="#27AE60"/></g></svg>
     </div>
 
     <!-- Animated Sun - Always Visible -->
     <div class="animated-sun">
-        <svg width="140" height="140" viewBox="-25 0 140 140" xmlns="http://www.w3.org/2000/svg">
-            <!-- Sun rays -->
-            <g stroke="#F1C40F" stroke-width="4" stroke-linecap="round" opacity="0.9">
-                <line class="sun-ray-1" x1="70" y1="10" x2="70" y2="28"/>
-                <line class="sun-ray-2" x1="110" y1="30" x2="98" y2="42"/>
-                <line class="sun-ray-3" x1="130" y1="70" x2="112" y2="70"/>
-                <line class="sun-ray-4" x1="110" y1="110" x2="98" y2="98"/>
-                <line class="sun-ray-5" x1="70" y1="130" x2="70" y2="112"/>
-                <line class="sun-ray-6" x1="30" y1="110" x2="42" y2="98"/>
-                <line class="sun-ray-7" x1="10" y1="70" x2="28" y2="70"/>
-                <line class="sun-ray-8" x1="30" y1="30" x2="42" y2="42"/>
-            </g>
-            
-            <!-- Sun body -->
-            <circle cx="70" cy="70" r="32" fill="#F39C12" opacity="0.95"/>
-            <circle cx="70" cy="70" r="24" fill="#FFD700" opacity="0.9"/>
-        </svg>
+        <svg width="140" height="140" viewBox="-25 0 140 140" xmlns="http://www.w3.org/2000/svg"><g stroke="#F1C40F" stroke-width="4" stroke-linecap="round" opacity="0.9"><line class="sun-ray-1" x1="70" y1="10" x2="70" y2="28"/><line class="sun-ray-2" x1="110" y1="30" x2="98" y2="42"/><line class="sun-ray-3" x1="130" y1="70" x2="112" y2="70"/><line class="sun-ray-4" x1="110" y1="110" x2="98" y2="98"/><line class="sun-ray-5" x1="70" y1="130" x2="70" y2="112"/><line class="sun-ray-6" x1="30" y1="110" x2="42" y2="98"/><line class="sun-ray-7" x1="10" y1="70" x2="28" y2="70"/><line class="sun-ray-8" x1="30" y1="30" x2="42" y2="42"/></g><circle cx="70" cy="70" r="32" fill="#F39C12" opacity="0.95"/><circle cx="70" cy="70" r="24" fill="#FFD700" opacity="0.9"/></svg>
     </div>
     
-    <!-- Main Content -->
+    <!-- Main Content Card -->
     <div class="content-layer w-full max-w-5xl mx-auto">
-        <div class="card-bg rounded-3xl p-6 md:p-12 text-warm-brown shadow-2xl ">
+        <div class="card-bg rounded-3xl p-6 md:p-12 text-warm-brown shadow-2xl">
             
             <!-- Header Section -->
-            <div class="text-center ">
-                <!-- <div class="w-25 h-25 md:w-36 md:h-36 mx-auto my-10 mb-20" onclick="logoClick()">
-    <img src="./static/1000113952-removebg-preview(1).png" alt="PAHAL Foundation Logo" class=" class="w-full h-full object-contain"">
-</div> -->
-                <h1 class="text-3xl md:text-6xl font-bold mb-2 text-ochre-dark font-poppins">
-                    Pahal Carnival!
-                </h1>
+            <header class="text-center">
+                <h1 class="text-3xl md:text-6xl font-bold mb-2 text-ochre-dark font-poppins">Pahal Carnival!</h1>
                 <p class="text-base md:text-xl text-warm-brown font-semibold">Fun • Games • Laughter • Memories</p>
-            </div>
+            </header>
 
             <!-- Key Info Grid -->
-            <div class="info-grid-mobile grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-6 md:mb-8">
-                <div class="info-date rounded-xl p-3 md:p-4 text-center hover-lift">
-                    <div class="text-2xl md:text-3xl mb-1 md:mb-2">📅</div>
-                    <div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Date</div>
-                    <div class="font-bold text-sm md:text-lg">Sept 4</div>
-                </div>
-                <div class="info-time rounded-xl p-3 md:p-4 text-center hover-lift">
-                    <div class="text-2xl md:text-3xl mb-1 md:mb-2">⏰</div>
-                    <div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Time</div>
-                    <div class="font-bold text-sm md:text-lg">1:30-4PM</div>
-                </div>
-                <div class="info-venue rounded-xl p-3 md:p-4 text-center hover-lift">
-                    <div class="text-2xl md:text-3xl mb-1 md:mb-2">📍</div>
-                    <div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Venue</div>
-                    <div class="font-bold text-sm md:text-lg">AB1-Aud2</div>
-                </div>
-                <div class="info-entry rounded-xl p-3 md:p-4 text-center hover-lift">
-                    <div class="text-2xl md:text-3xl mb-1 md:mb-2">🎫</div>
-                    <div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Entry</div>
-                    <div class="font-bold text-sm md:text-lg">FREE</div>
-                </div>
-            </div>
+            <section class="info-grid-mobile grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 my-6 md:my-8">
+                <div class="info-date rounded-xl p-3 md:p-4 text-center hover-lift"><div class="text-2xl md:text-3xl mb-1 md:mb-2">📅</div><div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Date</div><div class="font-bold text-sm md:text-lg">Sept 4</div></div>
+                <div class="info-time rounded-xl p-3 md:p-4 text-center hover-lift"><div class="text-2xl md:text-3xl mb-1 md:mb-2">⏰</div><div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Time</div><div class="font-bold text-sm md:text-lg">1:15-4PM</div></div>
+                <div class="info-venue rounded-xl p-3 md:p-4 text-center hover-lift"><div class="text-2xl md:text-3xl mb-1 md:mb-2">📍</div><div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Venue</div><div class="font-bold text-sm md:text-lg">AB1-Aud2</div></div>
+                <div class="info-entry rounded-xl p-3 md:p-4 text-center hover-lift"><div class="text-2xl md:text-3xl mb-1 md:mb-2">🎫</div><div class="text-xs md:text-sm font-medium uppercase tracking-wide opacity-90">Entry</div><div class="font-bold text-sm md:text-lg">FREE</div></div>
+            </section>
 
             <!-- Games Section -->
-            <div class="mb-6 md:mb-8">
+            <section class="mb-6 md:mb-8">
                 <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-ochre-dark font-poppins">Games & Activities</h2>
-                <div class="game-grid-mobile grid grid-cols-2 md:grid-cols-8 gap-3 md:gap-4">
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Water Pong')">
-                        <div class="game-emoji mb-1">💧</div>
-                        <div class="text-xs font-semibold text-warm-brown">Water Pong</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Spoon Rush')">
-                        <div class="game-emoji mb-1">🥄</div>
-                        <div class="text-xs font-semibold text-warm-brown">Spoon Rush</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Ring Toss')">
-                        <div class="game-emoji mb-1">💍</div>
-                        <div class="text-xs font-semibold text-warm-brown">Ring Toss</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Blindfolded Art')">
-                        <div class="game-emoji mb-1">🎨</div>
-                        <div class="text-xs font-semibold text-warm-brown">Blindfolded Art</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('DIY Gifts')">
-                        <div class="game-emoji mb-1">🎁</div>
-                        <div class="text-xs font-semibold text-warm-brown">DIY Gifts</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Pyramid Siege')">
-                        <div class="game-emoji mb-1">🥤</div>
-                        <div class="text-xs font-semibold text-warm-brown">Pyramid Siege</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Life-size Snake and Ladders')">
-                        <div class="game-emoji mb-1">🐍</div>
-                        <div class="text-xs font-semibold text-warm-brown">Life-size Snakes and Ladders</div>
-                    </div>
-                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Beyblades')">
-                        <div class="game-emoji mb-1">🌀</div>
-                        <div class="text-xs font-semibold text-warm-brown">Beyblades</div>
-                    </div>
+                <div class="game-grid-mobile grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3 md:gap-4">
+                     <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Water Pong')"><div class="game-emoji mb-1">💧</div><div class="text-xs font-semibold text-warm-brown">Water Pong</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Spoon Rush')"><div class="game-emoji mb-1">🥄</div><div class="text-xs font-semibold text-warm-brown">Spoon Rush</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Ring Toss')"><div class="game-emoji mb-1">💍</div><div class="text-xs font-semibold text-warm-brown">Ring Toss</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Blindfolded Art')"><div class="game-emoji mb-1">🎨</div><div class="text-xs font-semibold text-warm-brown">Blindfolded Art</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('DIY Gifts')"><div class="game-emoji mb-1">🎁</div><div class="text-xs font-semibold text-warm-brown">DIY Gifts</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Pyramid Siege')"><div class="game-emoji mb-1">🥤</div><div class="text-xs font-semibold text-warm-brown">Pyramid Siege</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Life-size Snake and Ladders')"><div class="game-emoji mb-1">🐍</div><div class="text-xs font-semibold text-warm-brown">Snakes & Ladders</div></div>
+                    <div class="game-card rounded-lg p-2 md:p-3 text-center" onclick="gameClick('Beyblades')"><div class="game-emoji mb-1">🌀</div><div class="text-xs font-semibold text-warm-brown">Beyblades</div></div>
                 </div>
-            </div>
+            </section>
 
+            <!-- About Pahal Section -->
+            <section class="mb-6 md:mb-8 text-center about-bg p-6 rounded-2xl">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-ochre-dark font-poppins">About Pahal</h2>
+                <p class="text-sm md:text-base max-w-3xl mx-auto text-warm-brown leading-relaxed">
+                    Pahal is a student-led volunteer organization dedicated to making a difference. We focus on educating and empowering underprivileged children, using fun and interactive activities to create bright futures.
+                </p>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mb-6 md:mb-8 text-center">
+                 <p class="text-sm text-warm-brown opacity-80">
+                    For any queries, contact Aastha (+91 86387 63422) or Krishnashish (+91 93220 19140).
+                </p>
+            </section>
+            
             <!-- CTA and Footer -->
-            <div class="text-center">
+            <footer class="text-center">
                 <button id="registerBtn" class="btn-carnival text-white px-6 md:px-10 py-3 md:py-5 rounded-2xl font-bold text-lg md:text-xl mb-4 md:mb-6 font-poppins w-full md:w-auto">
                     🎉 Join the Fun - Register Now
                 </button>
-                
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-6 text-warm-brown text-sm">
                     <div class="text-center">
                         <div class="font-bold text-ochre-dark font-poppins text-base md:text-lg">Pahal Foundation</div>
                         <div class="text-xs md:text-sm font-medium">Empowering Children Through Fun</div>
                     </div>
                     <div class="flex space-x-3">
-                         <a href="https://www.instagram.com/pahalfoundation_vitb?igsh=OW0wa2tpdGFnc3Vl" target ='blank' class="w-8 md:w-10 h-8 md:h-10 bg-pink-candy text-white rounded-xl flex items-center justify-center hover-lift text-sm md:text-lg transition-all hover:shadow-lg" onclick="socialClick('Instagram')">📷</a>
-                        <a href="https://whatsapp.com/channel/0029VaTSuD18V0tk5stDKu17" target ='blank' class="w-8 md:w-10 h-8 md:h-10 bg-green-500 text-white rounded-xl flex items-center justify-center hover-lift text-sm md:text-lg transition-all hover:shadow-lg" onclick="socialClick('WhatsApp')">💬</a>
+                         <a href="https://www.instagram.com/pahalfoundation_vitb?igsh=OW0wa2tpdGFnc3Vl" target="_blank" class="w-8 md:w-10 h-8 md:h-10 bg-pink-candy text-white rounded-xl flex items-center justify-center hover-lift text-sm md:text-lg transition-all hover:shadow-lg" onclick="socialClick('Instagram')">📷</a>
+                        <a href="https://whatsapp.com/channel/0029VaTSuD18V0tk5stDKu17" target="_blank" class="w-8 md:w-10 h-8 md:h-10 bg-green-500 text-white rounded-xl flex items-center justify-center hover-lift text-sm md:text-lg transition-all hover:shadow-lg" onclick="socialClick('WhatsApp')">💬</a>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
     </div>
 <script src="./static/index.js"></script>
